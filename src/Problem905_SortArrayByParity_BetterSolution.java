@@ -22,7 +22,7 @@ public class Problem905_SortArrayByParity_BetterSolution
 	{
 		return Arrays.stream(A)
 				.boxed()
-				.sorted(Comparator.comparingInt(a -> a % 2))        //.sorted((a, b) -> Integer.compare(a % 2, b % 2))
+				.sorted(Comparator.comparingInt(a -> a % 2))        // .sorted((a, b) -> Integer.compare(a % 2, b % 2))
 				.mapToInt(i -> i)
 				.toArray();
 	}

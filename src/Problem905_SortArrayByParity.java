@@ -22,7 +22,7 @@ public class Problem905_SortArrayByParity
 		return A;
 	}
 	
-	public static void main(String[] arg)
+	public static void main(String[] args)
 	{
 		Scanner inputScanner = new Scanner(System.in);
 		String inputString = inputScanner.nextLine();
