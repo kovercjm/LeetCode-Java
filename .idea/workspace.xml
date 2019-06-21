@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebea6a5d-7789-49ae-abe3-ee60814227d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Problem832_FlippingAnImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problem905_SortArrayByParity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problem905_SortArrayByParity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Problem905_SortArrayByParity_BetterSolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Problem905_SortArrayByParity_BetterSolution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +18,7 @@
     <favorites_list name="LeetCode_Java" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -54,6 +51,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="LeetCode_Java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="LeetCode_Java" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -65,17 +73,6 @@
               <item name="LeetCode_Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode_Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="LeetCode_Java" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="LeetCode_Java" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559026041107</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Problem 832">
+      <created>1559551681371</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559551681371</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -165,8 +169,8 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.64026403" visible="true" weight="0.19116081" />
-      <window_info id="Structure" order="1" sideWeight="0.35973597" side_tool="true" visible="true" weight="0.19116081" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6395864" visible="true" weight="0.19329074" />
+      <window_info id="Structure" order="1" sideWeight="0.36041358" side_tool="true" visible="true" weight="0.19329074" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -176,13 +180,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32970297" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.27227724" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32970297" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32970297" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32970297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -198,7 +202,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial setup" />
     <MESSAGE value="Problem905" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problem905" />
+    <MESSAGE value="Problem 832" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem 832" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LeetCode_Java$Problem905_SortArrayByParity.ic" NAME="Problem905_SortArrayByParity Coverage Results" MODIFIED="1559015066750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
