@@ -17,28 +17,15 @@
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
-        // Double-point
-        /*
         if (null == head || null == head.next) return head;
-        ListNode pre = head;
-        ListNode cur = head.next;
-        ListNode tmp = null;
-        head.next = null;
-        while (null != cur) {
-            tmp = cur.next;
-            cur.next = pre;
-            pre = cur;
-            cur = tmp;
+        ListNode cur = head;
+        while (null != head.next) {
+            ListNode tmp = head.next.next;
+            head.next.next = cur;
+            cur = head.next;
+            head.next = tmp;
         }
-        return pre;
-        */
-
-        // Recursion
-        if (null == head || null == head.next) return head;
-        ListNode last = reverseList(head.next);
-        head.next.next = head;
-        head.next = null;
-        return last;
+        return cur;
     }
 }
 // @lc code=end
