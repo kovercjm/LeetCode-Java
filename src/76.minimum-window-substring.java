@@ -8,8 +8,8 @@
 class Solution {
     public String minWindow(String s, String t) {
         int left = 0, right = 0, start = -1, length = Integer.MAX_VALUE, valid = 0;
-        HashMap<Character, Integer> target = new HashMap<Character, Integer>();
-        HashMap<Character, Integer> window = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> target = new HashMap<>();
+        HashMap<Character, Integer> window = new HashMap<>();
         for (char c : t.toCharArray())
             target.put(c, target.getOrDefault(c, 0) + 1);
 
@@ -29,7 +29,7 @@ class Solution {
                 char previous = s.charAt(left++);
                 if (null != target.get(previous)) {
                     window.put(previous, window.get(previous) - 1);
-                    if (target.get(previous) == window.get(previous) + 1)
+                    if (target.get(previous).equals(window.get(previous) + 1))
                         valid--;
                 }
             }
