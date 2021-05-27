@@ -7,8 +7,31 @@
 // @lc code=start
 class Solution {
     public int minOperations(int[] nums, int x) {
-        // Prefix sum
-        
+        int numsLength = nums.length, result = Integer.MAX_VALUE;
+        HashMap<Integer, Integer> leftPrefixSum = new HashMap<>(numsLength);
+        HashMap<Integer, Integer> rightPrefixSum = new HashMap<>(numsLength);
+
+        for (int i = 0, sum = 0; i < numsLength && sum <= x; i++){
+            sum += nums[i];
+            leftPrefixSum.put(sum, i + 1);
+        }
+        if (null != leftPrefixSum.get(x))
+            result = Math.min(result, leftPrefixSum.get(x));
+        else if (leftPrefixSum.size() == numsLength)
+           return -1;
+
+        for (int i = numsLength - 1, sum = 0; i >= 0 && sum <= x; i--){
+            sum += nums[i];
+            rightPrefixSum.put(sum, numsLength - i);
+        }
+        if (null != rightPrefixSum.get(x))
+            result = Math.min(result, rightPrefixSum.get(x));
+
+        for (int key : leftPrefixSum.keySet()) {
+            if (null != rightPrefixSum.get(x - key))
+                result = Math.min(result, (rightPrefixSum.get(x - key) + leftPrefixSum.get(key)));
+        }
+        return Integer.MAX_VALUE == result ? -1 : result;
     }
 }
 // @lc code=end
