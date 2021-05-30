@@ -8,7 +8,7 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         int left = 0, right = 0, length = Integer.MIN_VALUE;
-        HashMap<Character, Integer> window = new HashMap<Character, Integer>();
+        Map<Character, Integer> window = new HashMap<>();
 
         while (right < s.length()) {
             window.put(s.charAt(right), window.getOrDefault(s.charAt(right++), 0) + 1);

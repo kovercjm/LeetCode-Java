@@ -11,7 +11,7 @@ class Solution {
     }
     public int atMostK(int[] nums, int k) {
         int left = 0, result = 0;
-        HashMap<Integer, Integer> count = new HashMap<>();
+        Map<Integer, Integer> count = new HashMap<>();
 
         for (int right = 0; right < nums.length; right++) {
             count.put(nums[right], count.getOrDefault(nums[right], 0) + 1);

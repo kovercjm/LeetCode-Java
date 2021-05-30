@@ -8,7 +8,7 @@
 class Solution {
     public int totalFruit(int[] tree) {
         int left = 0, right = 0, answer = 0, sum = 0;
-        HashMap<Integer, Integer> window = new HashMap<>();
+        Map<Integer, Integer> window = new HashMap<>();
         while (right < tree.length) {
             int next = tree[right++];
             window.put(next, window.getOrDefault(next, 0) + 1);
