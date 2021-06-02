@@ -39,6 +39,12 @@ Coding environment: VS Code with LeetCode plugin.
   - 992
   - 1248
   - 1658
+- **Reservoir Sampling** related:
+  - 382
+  - 398
+- **Deleting from array in O(1)** related:
+  - 380
+  - 710
 
 ### 1.2 Linked List
 
