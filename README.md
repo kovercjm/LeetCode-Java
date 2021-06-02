@@ -45,8 +45,12 @@ Coding environment: VS Code with LeetCode plugin.
 - **Deleting from array in O(1)** related:
   - 380
   - 710
+- Others:
+  - 1
 
 ### 1.2 Linked List
+
+83
 
 206.[Reverse Linked List](./note/206.reverse-linked-list.md)
 
