@@ -13,11 +13,11 @@ class Solution {
         size = n - blacklist.length;
         map = new HashMap<>(blacklist.length);
 
-        for (int i = 0; i < blacklist.length; i++)
-            if (blacklist[i] < size)
-                map.put(blacklist[i], -1);
+        for (int j : blacklist)
+            if (j < size)
+                map.put(j, -1);
             else
-                map.put(blacklist[i], -2);
+                map.put(j, -2);
 
         int index = size;
 
@@ -34,7 +34,7 @@ class Solution {
         Random random = new Random();
         int index = random.nextInt(size);
 
-        return map.containsKey(index) ? map.get(index) : index;
+        return map.getOrDefault(index, index);
     }
 }
 
