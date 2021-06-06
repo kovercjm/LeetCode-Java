@@ -50,9 +50,26 @@ Coding environment: VS Code with LeetCode plugin.
 
 ### 1.2 Linked List
 
-83
+- 83
+- 203
+- 206
+- 707
 
-206.[Reverse Linked List](./note/206.reverse-linked-list.md)
+### 1.3 Stack
+
+- **Monotonic Stack** related:
+  - 496
+  - 503
+  - 739
+  - @316
+  - @321
+  - @402
+  - @1081
+  - @42
+  - @48
+  - @84
+  - @85
+  - @581
 
 ## 2 Algorithm
 ### 2. Dynamic Programming
