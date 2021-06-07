@@ -50,7 +50,14 @@ Coding environment: VS Code with LeetCode plugin.
 
 ### 1.2 Linked List
 
+- 19
+- 21
+- 24
+- 82
 - 83
+- 141 Circle in Linked List
+- 142 Circle in Linked List
+- 160
 - 203
 - 206
 - 707
@@ -77,3 +84,7 @@ Coding environment: VS Code with LeetCode plugin.
 @978
 
 @1658
+
+# 剑指offer
+
+- 52 -> 160
