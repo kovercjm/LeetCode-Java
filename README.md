@@ -55,11 +55,15 @@ Coding environment: VS Code with LeetCode plugin.
 - 24
 - 82
 - 83
+- 86
+- 138
 - 141 Circle in Linked List
 - 142 Circle in Linked List
+- 143
 - 160
 - 203
 - 206
+- 234
 - 707
 
 ### 1.3 Stack
