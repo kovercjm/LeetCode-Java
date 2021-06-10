@@ -83,7 +83,16 @@ Coding environment: VS Code with LeetCode plugin.
   - @85
   - @581
 
+### 1.4 Binary Tree
+
+- 114
+- 116
+- 144
+- 145
+- 226
+
 ## 2 Algorithm
+
 ### 2. Dynamic Programming
 
 @978
