@@ -95,8 +95,12 @@ Coding environment: VS Code with LeetCode plugin.
   - 226
   - 654
 - **BST** related:
+  - 98
   - 230
+  - 450
   - 538
+  - 700
+  - 701
   - 1038
 
 ## 2 Algorithm
