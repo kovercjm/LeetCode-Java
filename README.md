@@ -85,14 +85,19 @@ Coding environment: VS Code with LeetCode plugin.
 
 ### 1.4 Binary Tree
 
-- 105
-- 106
-- 114
-- 116
-- 144
-- 145
-- 226
-- 654
+- General:
+  - 105
+  - 106
+  - 114
+  - 116
+  - 144
+  - 145
+  - 226
+  - 654
+- **BST** related:
+  - 230
+  - 538
+  - 1038
 
 ## 2 Algorithm
 
