@@ -86,6 +86,8 @@ Coding environment: VS Code with LeetCode plugin.
 ### 1.4 Binary Tree
 
 - General:
+  - 95
+  - 96
   - 105
   - 106
   - 114
