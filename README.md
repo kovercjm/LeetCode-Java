@@ -39,12 +39,6 @@ Coding environment: VS Code with LeetCode plugin.
   - 992
   - 1248
   - 1658
-- **Reservoir Sampling** related:
-  - 382
-  - 398
-- **Deleting from array in O(1)** related:
-  - 380
-  - 710
 - Others:
   - 1
 
@@ -86,6 +80,7 @@ Coding environment: VS Code with LeetCode plugin.
 ### 1.4 Binary Tree
 
 - General:
+  - 94
   - 95
   - 96
   - 105
@@ -94,6 +89,7 @@ Coding environment: VS Code with LeetCode plugin.
   - 116
   - 144
   - 145
+  - 222
   - 226
   - 654
 - **BST** related:
@@ -104,6 +100,16 @@ Coding environment: VS Code with LeetCode plugin.
   - 700
   - 701
   - 1038
+  - 1373
+
+### 1.5 Design Data Structure
+
+- **Reservoir Sampling** related:
+  - 382
+  - 398
+- **Deleting from array in O(1)** related:
+  - 380
+  - 710
 
 ## 2 Algorithm
 
