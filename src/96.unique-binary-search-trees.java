@@ -10,7 +10,7 @@ class Solution {
 
     public int count(int min, int max) {
         if (min >= max) return 1;
-        if (0 != result[min][max])
+        if (result[min][max] != 0)
             return result[min][max];
         
         int sum = 0;

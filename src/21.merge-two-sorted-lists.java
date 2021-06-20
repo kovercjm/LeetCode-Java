@@ -19,7 +19,7 @@ class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode start = new ListNode(-101);
         ListNode p = l1, q = l2, end = start;
-        while (null != p && null != q) {
+        while (p != null && q != null) {
             if (p.val <= q.val){
                 end.next = p;
                 p = p.next;
@@ -30,7 +30,7 @@ class Solution {
                 end = end.next;
             }
         }
-        end.next = null == p ? q : p;
+        end.next = p == null ? q : p;
         return start.next;
     }
 }

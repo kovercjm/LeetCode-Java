@@ -16,10 +16,9 @@ class Solution {
         int index = 1, result = 0;
         Random random = new Random();
 
-        for (int i = 0; i < nums.length; i++) {
-            if (target == nums[i] && 0 == random.nextInt(index++))
+        for (int i = 0; i < nums.length; i++)
+            if (nums[i] == target && random.nextInt(index++) == 0)
                 result = i;
-        }
         return result;
     }
 }

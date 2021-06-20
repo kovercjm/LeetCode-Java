@@ -22,9 +22,9 @@
  */
 class Solution {
     public TreeNode searchBST(TreeNode root, int val) {
-        if (null == root || val == root.val) return root;
+        if (root == null || root.val == val) return root;
 
-        return val < root.val ? searchBST(root.left, val) : searchBST(root.right, val);
+        return root.val > val ? searchBST(root.left, val) : searchBST(root.right, val);
     }
 }
 // @lc code=end

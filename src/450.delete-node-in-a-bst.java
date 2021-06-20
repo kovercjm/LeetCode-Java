@@ -28,16 +28,15 @@ class Solution {
     }
 
     public TreeNode deleteNode(TreeNode root, int key) {
-        if (null == root) return null;
+        if (root == null) return null;
         if (root.val < key)
             root.right = deleteNode(root.right, key);
         else if (root.val > key)
             root.left = deleteNode(root.left, key);
         else {
-            if (null == root.left) return root.right;
-            if (null == root.right) return root.left;
-            TreeNode tmp = findSuccessor(root.right);
-            tmp.left = root.left;
+            if (root.left == null) return root.right;
+            if (root.right == null) return root.left;
+            (findSuccessor(root.right)).left = root.left;
             root = root.right;
         }
         return root;

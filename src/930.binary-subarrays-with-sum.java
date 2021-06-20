@@ -15,7 +15,7 @@ class Solution {
                 sum -= nums[left++];
             if (sum == goal) {
                 int zero = left;
-                while (zero < right && 0 == nums[zero])
+                while (zero < right && nums[zero] == 0)
                     zero++;
                 count += zero - left + 1;
             }

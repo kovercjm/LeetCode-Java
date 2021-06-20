@@ -22,7 +22,7 @@
  */
 class Solution {
     public void swap(TreeNode root) {
-        if (null == root || (null == root.left && null == root.right)) return;
+        if (root == null || (root.left == null && root.right == null)) return;
 
         TreeNode tmp = root.left;
         swap(root.left);

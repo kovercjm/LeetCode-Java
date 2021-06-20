@@ -22,9 +22,8 @@ class Solution {
         int index = size;
 
         for (int i : map.keySet()) {
-            while (map.containsKey(index)) {
+            while (map.containsKey(index))
                 index++;
-            }
             if (i < size)
                 map.put(i, index++);
         }

@@ -14,10 +14,10 @@ class Solution {
             window.put(next, window.getOrDefault(next, 0) + 1);
             sum++;
 
-            while (2 < window.size()) {
+            while (window.size() > 2) {
                 int previous = tree[left++];
                 answer = Math.max(--sum, answer);
-                if (1 == window.get(previous))
+                if (window.get(previous) == 1)
                     window.remove(previous);
                 else
                     window.put(previous, window.get(previous) - 1);

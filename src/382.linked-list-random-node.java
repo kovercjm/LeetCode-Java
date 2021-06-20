@@ -30,8 +30,8 @@ class Solution {
         Random random = new Random();
         ListNode p = head;
 
-        while (null != p) {
-            if (0 == random.nextInt(i++))
+        while (p != null) {
+            if (random.nextInt(i++) == 0)
                 result = p.val;
             p = p.next;
         }

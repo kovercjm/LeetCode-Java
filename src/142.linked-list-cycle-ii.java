@@ -20,7 +20,7 @@ public class Solution {
     public ListNode detectCycle(ListNode head) {
         ListNode p = head, q = head;
         do {
-            if (null == q || null == q.next)
+            if (q == null || q.next == null)
                 return null;
             p = p.next;
             q = q.next.next;

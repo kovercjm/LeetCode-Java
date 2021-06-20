@@ -10,7 +10,7 @@ class Solution {
         int left = 0, right = 0, length = Integer.MIN_VALUE;
         Map<Character, Integer> window = new HashMap<>();
 
-        while (right < s.length()) {
+        while (s.length() > right) {
             window.put(s.charAt(right), window.getOrDefault(s.charAt(right++), 0) + 1);
 
             while (window.get(s.charAt(right - 1)) > 1) {
@@ -18,7 +18,7 @@ class Solution {
                 window.put(s.charAt(left), window.get(s.charAt(left++)) - 1);
             }
         }
-        return length == Integer.MIN_VALUE ? s.length() : Math.max(right - left, length);
+        return Integer.MIN_VALUE == length ? s.length() : Math.max(right - left, length);
     }
 }
 // @lc code=end

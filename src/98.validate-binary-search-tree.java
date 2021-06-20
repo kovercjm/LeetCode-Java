@@ -22,8 +22,8 @@
  */
 class Solution {
     public boolean isValidBST(TreeNode root, TreeNode min, TreeNode max) {
-        if (null == root) return true;
-        if (null != min && min.val >= root.val || null != max && max.val <= root.val) return false;
+        if (root == null) return true;
+        if (min != null && min.val >= root.val || max != null && max.val <= root.val) return false;
         return isValidBST(root.left, min, root) && isValidBST(root.right, root, max);
     }
 

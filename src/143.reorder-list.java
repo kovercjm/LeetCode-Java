@@ -17,7 +17,7 @@
  */
 class Solution {
     public ListNode reverse(ListNode head) {
-        if (null == head.next) return head;
+        if (head.next == null) return head;
         ListNode last = reverse(head.next);
         head.next.next = head;
         head.next = null;
@@ -25,10 +25,10 @@ class Solution {
     }
 
     public void reorderList(ListNode head) {
-        if (null == head || null == head.next || null == head.next.next) return;
+        if (head == null || head.next == null || head.next.next == null) return;
 
         ListNode p = head, q = head, half, tmp;
-        while (null != q && null != q.next) {
+        while (q != null && q.next != null) {
             q = q.next.next;
             p = p.next;
         }
@@ -36,7 +36,7 @@ class Solution {
         p.next = null;
         p = head;
         q = half;
-        while (null != q) {
+        while (q != null) {
             tmp = q.next;
             q.next = p.next;
             p.next = q;
@@ -49,10 +49,10 @@ class Solution {
 
 /*
     public ListNode order(ListNode head) {
-        if (null == head || null == head.next || null == head.next.next) return head;
+        if (head == null || head.next == null || head.next.next == null) return head;
 
         ListNode pre = head, end = head.next;
-        while (null != end.next) {
+        while (end.next != null) {
             pre = pre.next;
             end = end.next;
         }
@@ -63,9 +63,6 @@ class Solution {
         return head;
     }
 
-    public void reorderList(ListNode head) {
-        order(head);
-    }
     public void reorderList(ListNode head) {
         order(head);
     }

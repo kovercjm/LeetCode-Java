@@ -31,7 +31,7 @@ class Solution {
             if (rightPrefixSum.containsKey(x - key))
                 result = Math.min(result, (rightPrefixSum.get(x - key) + leftPrefixSum.get(key)));
         }
-        return Integer.MAX_VALUE == result ? -1 : result;
+        return result == Integer.MAX_VALUE ? -1 : result;
     }
 }
 // @lc code=end
@@ -40,15 +40,14 @@ class Solution {
 /*
     public int minOperations(int[] nums, int x) {
         int left = 0, right = 0, length = 0, restSum = Arrays.stream(nums).sum() - x;
-        if (0 == restSum) return nums.length;
+        if (restSum == 0) return nums.length;
         while (right < nums.length) {
             restSum -= nums[right++];
-            while (left < right && 0 > restSum) {
+            while (left < right && restSum < 0)
                 restSum += nums[left++];
-            }
-            if (0 == restSum)
+            if (restSum == 0)
                 length = Math.max(length, right - left);
         }
-        return 0 != length ? nums.length - length : -1;
+        return length != 0 ? nums.length - length : -1;
     }
 */

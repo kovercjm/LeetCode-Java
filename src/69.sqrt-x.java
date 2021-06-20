@@ -7,11 +7,11 @@
 // @lc code=start
 class Solution {
     public int mySqrt(int x) {
-        if (0 == x || 1 == x) return x;
+        if (x == 0 || x == 1) return x;
         int left = 0, right = x, answer = 0;
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            if (x >= (long) mid * mid) {
+            if ((long) mid * mid >= x) {
                 answer = mid;
                 left = mid + 1;
             } else {

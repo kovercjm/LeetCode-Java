@@ -21,23 +21,21 @@
  * }
  */
 class Solution {
-    Map<String, Integer> subTrees;
-    List<TreeNode> result;
+    Map<String, Integer> subTrees = new HashMap<>();
+    List<TreeNode> result = new ArrayList<>();
 
     public String triverse(TreeNode root) {
-        if (null == root) return "#";
+        if (root == null) return "#";
 
         String tree = root.val + "," + triverse(root.left) + "," + triverse(root.right);
         subTrees.put(tree, subTrees.getOrDefault(tree, 0) + 1);
-        if (2 == subTrees.get(tree))
+        if (subTrees.get(tree) == 2)
             result.add(root);
         
         return tree;
     }
 
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-        subTrees = new HashMap<>();
-        result = new ArrayList<>();
         triverse(root);
         return result;
     }

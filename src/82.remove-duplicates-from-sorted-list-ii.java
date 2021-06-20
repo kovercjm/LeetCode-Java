@@ -17,7 +17,7 @@
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if (null == head) return head;
+        if (head == null) return head;
         ListNode start = new ListNode(-101, head);
         ListNode p = start, q = start.next.next;
 
@@ -26,10 +26,10 @@ class Solution {
                 p = p.next;
                 q = q.next;
             } else {
-                while (null != q && q.val == p.next.val)
+                while (q != null && q.val == p.next.val)
                     q = q.next;
                 p.next = q;
-                q = null == q ? null : q.next;
+                q = q == null ? null : q.next;
             }
         }
 

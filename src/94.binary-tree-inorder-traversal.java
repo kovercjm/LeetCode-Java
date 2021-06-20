@@ -24,7 +24,7 @@ class Solution {
     public List<Integer> result = new ArrayList<>();
 
     public void traverse(TreeNode root) {
-        if (null == root) return;
+        if (root == null) return;
         traverse(root.left);
         result.add(root.val);
         traverse(root.right);

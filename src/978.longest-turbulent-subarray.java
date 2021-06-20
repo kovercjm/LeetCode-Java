@@ -7,8 +7,8 @@
 // @lc code=start
 class Solution {
     public int maxTurbulenceSize(int[] arr) {
-        if (1 >= arr.length) return arr.length;
-        if (2 == arr.length) return arr[0] == arr[1] ? 1 : 2;
+        if (arr.length <= 1) return arr.length;
+        if (arr.length == 2) return arr[0] == arr[1] ? 1 : 2;
 
         int[] relation = new int[arr.length - 1];
         for (int i = 0; i < relation.length; i++)
@@ -19,14 +19,13 @@ class Solution {
             else
                 relation[i] = 0;
 
-        int left = 0 == relation[0] ? 1 : 0, right = 1, max = 0;
-        for (right = 1; right < relation.length; right++) {
-            if (relation[right] == relation[right - 1] || 0 == relation[right]) {
+        int left = relation[0] == 0 ? 1 : 0, right = 1, max = 0;
+        for (right = 1; right < relation.length; right++)
+            if (relation[right] == relation[right - 1] || relation[right] == 0) {
                 max = Math.max(max, right - left + 1);
-                left = 0 == relation[right] ? right + 1 : right;
+                left = relation[right] == 0 ? right + 1 : right;
                 continue;
             }
-        }
         return Math.max(max, (right - left + 1));
     }
 }

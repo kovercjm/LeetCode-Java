@@ -20,8 +20,8 @@ class Solution {
         ListNode originalStart = new ListNode(-101, head);
         ListNode newStart = new ListNode(-101, null);
         ListNode p = originalStart, q = newStart, t;
-        while (null != p.next) {
-            if (x > p.next.val) {
+        while (p.next != null) {
+            if (p.next.val < x) {
                 q.next = p.next;
                 q = q.next;
                 p.next = p.next.next;

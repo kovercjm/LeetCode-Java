@@ -8,20 +8,16 @@
 class Solution {
     public void moveZeroes(int[] nums) {
         int i = 0;
-        while (i < nums.length && 0 != nums[i]) {
+        while (i < nums.length && nums[i] != 0)
             i++;
-        }
         if (i == nums.length) return;
 
         int j = i;
-        while (++j < nums.length) {
-            if (0 != nums[j]) {
+        while (++j < nums.length)
+            if (nums[j] != 0)
                 nums[i++] = nums[j];
-            }
-        }
-        while (i < nums.length) {
+        while (i < nums.length)
             nums[i++] = 0;
-        }
         return;
     }
 }

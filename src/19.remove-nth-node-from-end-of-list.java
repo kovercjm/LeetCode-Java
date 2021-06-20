@@ -20,10 +20,10 @@ class Solution {
         ListNode start = new ListNode(-1, head);
         ListNode p = start, q = start.next;
 
-        while (0 < n-- && null != q)
+        while (n-- > 0 && q != null)
             q = q.next;
 
-        while (null != q) {
+        while (q != null) {
             q = q.next;
             p = p.next;
         }

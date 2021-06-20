@@ -24,10 +24,10 @@ class Solution {
     public int k, result;
     
     public void triverse(TreeNode root) {
-        if (null == root || k < 0) return;
+        if (root == null || k < 0) return;
 
         triverse(root.left);
-        if (0 == --k) result = root.val;
+        if (--k == 0) result = root.val;
         triverse(root.right);
     }
 

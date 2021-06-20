@@ -17,12 +17,12 @@ class MyLinkedList {
     public int get(int index) {
         ListNode p = start;
 
-        while (0 < index && null != p.next) {
+        while (index > 0 && p.next != null) {
             index--;
             p = p.next;
         }
 
-        if (0 == index && null != p.next)
+        if (index == 0 && p.next != null)
             return p.next.val;
         return -1;
     }
@@ -36,7 +36,7 @@ class MyLinkedList {
     public void addAtTail(int val) {
         ListNode p = start;
 
-        while (null != p.next)
+        while (p.next != null)
             p = p.next;
 
         p.next = new ListNode(val, null);
@@ -46,12 +46,12 @@ class MyLinkedList {
     public void addAtIndex(int index, int val) {
         ListNode p = start;
 
-        while (0 < index && null != p.next) {
+        while (index > 0 && p.next != null) {
             index--;
             p = p.next;
         }
         
-        if (0 == index)
+        if (index == 0)
             p.next = new ListNode(val, p.next);
     }
 
@@ -59,12 +59,12 @@ class MyLinkedList {
     public void deleteAtIndex(int index) {
         ListNode p = start;
 
-        while (0 < index && null != p.next) {
+        while (index > 0 && p.next != null) {
             index--;
             p = p.next;
         }
 
-        if (0 == index && null != p.next)
+        if (index == 0 && p.next != null)
             p.next = p.next.next;
     }
 }

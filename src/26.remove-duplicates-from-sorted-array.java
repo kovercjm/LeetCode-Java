@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution {
     public int removeDuplicates(int[] nums) {
-        if (1 >= nums.length) return nums.length;
+        if (nums.length <= 1) return nums.length;
         int i = 0; 
         for (int j = 1; j < nums.length; j++) {
             if (nums[i] < nums[j]) {

@@ -26,10 +26,9 @@ class Solution {
 
     public TreeNode build(int preRoot, int inStart, int inEnd) {
         TreeNode root = new TreeNode(pre[preRoot]);
-
         if (inStart == inEnd) return root;
-
         int inRoot = inList.indexOf(pre[preRoot]);
+        
         root.left = inRoot == inStart ? null : build(preRoot + 1, inStart, inRoot - 1);
         root.right = inRoot == inEnd ? null : build(preRoot + (inRoot - inStart) + 1, inRoot + 1, inEnd);
         return root;

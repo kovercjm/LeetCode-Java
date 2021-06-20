@@ -17,7 +17,7 @@
  */
 class Solution {
     public ListNode reverse(ListNode head) {
-        if (null == head.next) return head;
+        if (head.next == null) return head;
         ListNode last = reverse(head.next);
         head.next.next = head;
         head.next = null;
@@ -25,17 +25,17 @@ class Solution {
     }
     
     public boolean isPalindrome(ListNode head) {
-        if (null == head.next) return true;
+        if (head.next == null) return true;
 
         ListNode p = head, q = head.next.next, half;
-        while (null != q && null != q.next) {
+        while (q != null && q.next != null) {
             p = p.next;
             q = q.next.next;
         }
         half = reverse(p.next);
         p.next = null;
         p = head;
-        while (null != p) {
+        while (p != null) {
             if (p.val != half.val)
                 return false;
             p = p.next;

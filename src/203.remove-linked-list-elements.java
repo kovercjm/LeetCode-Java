@@ -20,8 +20,8 @@ class Solution {
         ListNode result = new ListNode(0, head);
         head = result;
 
-        while (null != head.next) {
-            if (val == head.next.val)
+        while (head.next != null) {
+            if (head.next.val == val)
                 head.next = head.next.next;
             else
                 head = head.next;

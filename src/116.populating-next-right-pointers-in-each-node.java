@@ -30,7 +30,7 @@ class Node {
 
 class Solution {
     public void connectBelow(Node left, Node right) {
-        if (null == left) return;
+        if (left == null) return;
 
         left.next = right;
         connectBelow(left.left, left.right);
@@ -39,8 +39,7 @@ class Solution {
     }
 
     public Node connect(Node root) {
-        if (null == root || null == root.left) return root;
-
+        if (root == null || root.left == null) return root;
         connectBelow(root.left, root.right);
         return root;
     }

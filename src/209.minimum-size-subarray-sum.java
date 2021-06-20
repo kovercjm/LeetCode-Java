@@ -10,7 +10,7 @@ class Solution {
         int left = 0, right = 0, length = Integer.MAX_VALUE, sum = 0;
         while (right < nums.length) {
             sum += nums[right++];
-            while (sum >= target) {
+            while (target <= sum) {
                 length = Math.min(right - left, length);
                 sum -= nums[left++];
             }

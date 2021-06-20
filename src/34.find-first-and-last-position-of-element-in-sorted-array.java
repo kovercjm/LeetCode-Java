@@ -7,12 +7,12 @@
 // @lc code=start
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        if (0 == nums.length || target > nums[nums.length - 1] || target < nums[0]) return new int[]{-1, -1};
+        if (nums.length == 0 || nums[nums.length - 1] < target || nums[0] > target) return new int[]{-1, -1};
 
         int left = 0, right = nums.length, leftRange = -1;
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if (target == nums[mid]) {
+            if (nums[mid] == target) {
                 right = mid;
             } else if (target < nums[mid]) {
                 right = mid;
@@ -21,7 +21,7 @@ class Solution {
             }
         }
 
-        if (target != nums[left])
+        if (nums[left] != target)
             return new int[]{-1, -1};
         leftRange = left;
 
@@ -29,7 +29,7 @@ class Solution {
         right = nums.length;
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if (target == nums[mid]) {
+            if (nums[mid] == target) {
                 left = mid + 1;
             } else if (target < nums[mid]) {
                 right = mid;
@@ -38,7 +38,7 @@ class Solution {
             }
         }
 
-        return new int[] {leftRange, left - 1};
+        return new int[]{leftRange, left - 1};
     }
 }
 // @lc code=end

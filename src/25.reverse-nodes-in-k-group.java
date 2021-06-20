@@ -17,7 +17,7 @@
  */
 class Solution {
     public ListNode reverseBeforeP(ListNode head, ListNode p) {
-        if (p == head.next) {
+        if (head.next == p) {
             head.next = null;
             return head;
         }
@@ -30,7 +30,7 @@ class Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode p = head;
         for (int i = 1; i <= k; i++) {
-            if (null == p)
+            if (p == null)
                 return head;
             p = p.next;
         }

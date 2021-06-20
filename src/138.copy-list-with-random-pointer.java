@@ -24,7 +24,7 @@ class Solution {
     public Map<Node, Node> map = new HashMap<>();
 
     public Node copyRandomList(Node head) {
-        if (null == head) return head;
+        if (head == null) return head;
         if (map.containsKey(head)) return map.get(head);
 
         Node newHead = new Node(head.val);

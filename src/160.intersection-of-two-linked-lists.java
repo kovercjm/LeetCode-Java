@@ -20,8 +20,8 @@ public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode p = headA, q = headB;
         while (p != q) {
-            p = null == p ? headB : p.next;
-            q = null == q ? headA : q.next;
+            p = p == null ? headB : p.next;
+            q = q == null ? headA : q.next;
         }
         return p;
     }

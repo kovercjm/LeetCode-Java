@@ -21,10 +21,10 @@
  * }
  */
 class Solution {
-    public int sum;
+    public int sum = 0;
 
     public void triverse(TreeNode root) {
-        if (null == root) return;
+        if (root == null) return;
         triverse(root.right);
         sum += root.val;
         root.val = sum;
@@ -32,7 +32,6 @@ class Solution {
     }
 
     public TreeNode convertBST(TreeNode root) {
-        sum = 0;
         triverse(root);
         return root;
     }

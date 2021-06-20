@@ -20,7 +20,7 @@ class Solution {
         ListNode start = new ListNode(-1, head);
         ListNode p = start, q;
         
-        while (null != p.next && null != p.next.next) {
+        while (p.next != null && p.next.next != null) {
             q = p.next.next;
             p.next.next = q.next;
             q.next = p.next;

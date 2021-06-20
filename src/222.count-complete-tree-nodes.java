@@ -22,16 +22,16 @@
  */
 class Solution {
     public int countNodes(TreeNode root) {
-        if (null == root) return 0;
+        if (root == null) return 0;
 
         int leftHight = 0, rightHight = 0;
         TreeNode t = root;
-        while (null != t.left) {
+        while (t.left != null) {
             t = t.left;
             leftHight++;
         }
         t = root;
-        while (null != t.right) {
+        while (t.right != null) {
             t = t.right;
             rightHight++;
         }

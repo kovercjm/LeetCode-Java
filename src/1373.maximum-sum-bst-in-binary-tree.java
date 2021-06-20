@@ -24,18 +24,18 @@ class Solution {
     public int max = 0;
 
     public int[] count(TreeNode root) {       // int[] = {sum, min, max}
-        if (null == root) return new int[]{0};
+        if (root == null) return new int[]{0};
 
         int[] leftResult = count(root.left), rightResult = count(root.right);
 
-        if (null == leftResult || null == rightResult ||
-            (null != root.left && leftResult[2] >= root.val) ||
-            (null != root.right && root.val >= rightResult[1])) return null;
+        if (leftResult == null || rightResult == null ||
+            (root.left != null && leftResult[2] >= root.val) ||
+            (root.right != null && root.val >= rightResult[1])) return null;
 
         int sum = root.val + leftResult[0] + rightResult[0];
         max = Math.max(sum, max);
-        return new int[]{ sum, null != root.left ? leftResult[1] : root.val,
-            null != root.right ? rightResult[2] : root.val};
+        return new int[]{ sum, root.left != null ? leftResult[1] : root.val,
+            root.right != null ? rightResult[2] : root.val};
     }
     
     public int maxSumBST(TreeNode root) {

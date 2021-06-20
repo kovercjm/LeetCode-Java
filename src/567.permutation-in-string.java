@@ -22,7 +22,7 @@ class Solution {
             }
 
             if (right - left == s1.length()) {
-                if (valid == target.size())
+                if (target.size() == valid)
                     return true;
                 char previous = s2.charAt(left++);
                 if (target.containsKey(previous)) {
