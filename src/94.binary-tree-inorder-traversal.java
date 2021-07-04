@@ -21,6 +21,34 @@
  * }
  */
 class Solution {
+    // Morris Solution
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        TreeNode current = root, mostRight = null;
+
+        while (current != null) {
+            mostRight = current.left;
+            if (mostRight != null) {
+                while (mostRight.right != null && mostRight.right != current)
+                    mostRight = mostRight.right;
+                if (mostRight.right == null) {
+                    mostRight.right = current;
+                    current = current.left;
+                    continue;
+                } else
+                    mostRight.right = null;
+            }
+            result.add(current.val);
+            current = current.right;
+        }
+        
+        return result;
+    }
+}
+// @lc code=end
+
+// Recursion Solution
+/*
     public List<Integer> result = new ArrayList<>();
 
     public void traverse(TreeNode root) {
@@ -34,5 +62,4 @@ class Solution {
         traverse(root);
         return result;
     }
-}
-// @lc code=end
+*/
