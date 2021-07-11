@@ -156,6 +156,10 @@ Coding environment: VS Code with LeetCode plugin.
 
 ### 2. Dynamic Programming
 
+- Introduction:
+  - 509
+  - 322
+
 @978
 
 Tree DP 1372
