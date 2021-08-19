@@ -157,14 +157,19 @@ Coding environment: VS Code with LeetCode plugin.
 ### 2. Dynamic Programming
 
 - Introduction:
-  - 509
+  - 300
   - 322
+  - 509
 
 @978
 
 Tree DP 1372
 
 @1658
+
+
+
+KMP - @28
 
 # 剑指offer
 
